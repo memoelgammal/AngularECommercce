@@ -1,0 +1,13 @@
+<div class="row mt-5">
+    <div *ngFor="let i of Shared.Heros" class="card col-3">
+      <div class="cadr-header">{{i.hName}}</div>
+      <img src="{{i.hImage}}" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Heros Power</h5>
+    <p class="card-text">{{i.hPower}}</p>
+      </div>
+      <div class="card-footer">
+        <button *ngIf="ShowHeroList" class="btn btn-danger" (click)="Shared.DelHero(i.hId)">Delete</button>
+      </div>
+    </div>
+  </div>
