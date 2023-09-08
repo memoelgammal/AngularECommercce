@@ -10,6 +10,9 @@ export class SharedService {
   Power = 0;
   Img ="";
   Id = 0;
+  
+  WichHero = 0;
+
   Heros: {hId : number; hName: string; hPower: number; hImage: string}[] = [];
 
   
@@ -20,5 +23,9 @@ export class SharedService {
   
   DelHero(i:number){
     this.Heros.splice(i,1);
+  }
+
+  SelDetails(i:number){
+    this.WichHero = i;
   }
 }

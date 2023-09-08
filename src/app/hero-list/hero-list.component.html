@@ -1,6 +1,6 @@
 <div class="row mt-5">
     <div *ngFor="let i of Shared.Heros" class="card col-3">
-      <div class="cadr-header">{{i.hName}}</div>
+      <div class="cadr-header text-center"><h2>{{i.hName}}</h2></div>
       <img src="{{i.hImage}}" class="card-img-top">
       <div class="card-body">
         <h5 class="card-title">Heros Power</h5>
@@ -8,6 +8,7 @@
       </div>
       <div class="card-footer">
         <button *ngIf="ShowHeroList" class="btn btn-danger" (click)="Shared.DelHero(i.hId)">Delete</button>
+        <a routerLink="../details" (click)="Shared.SelDetails(i.hId)" class="btn btn-info">Details</a>
       </div>
     </div>
   </div>
